@@ -22,6 +22,8 @@ class DataLoader:
   def load_order_details_1000_pkl(this):
     def __iter__(self): return 0
     body = this.client.get_object(
-        this.credentials['BUCKET'],Key='order_details_1000.pkl')['Body']
+        Bucket=this.credentials['BUCKET'],
+        Key='order_details_1000.pkl'
+        )['Body']
     if not hasattr(body, "__iter__"): body.__iter__ = types.MethodType( __iter__, body )
     return pickle.loads(body.read())
