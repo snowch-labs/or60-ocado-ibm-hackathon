@@ -26,3 +26,6 @@ class DataLoader:
 
   def load_order_details_1000(this):
     return _load_pickle('order_details_1000.pkl')
+
+  def load_ordered_skus(this):
+    return _load_pickle('ordered_skus.pkl')
