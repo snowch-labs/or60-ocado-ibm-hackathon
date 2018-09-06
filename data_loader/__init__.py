@@ -34,10 +34,10 @@ class DataLoader:
     return this._load_pickle('ordered_skus_1000.pkl')
 
   def load_ordered_skus_30000(this):
-    return this._load_pickle('ordered_skus_1000.pkl')
+    return this._load_pickle('ordered_skus_30000.pkl')
 
   def load_ordered_skus(this):
-    return this._load_pickle('ordered_skus_30000.pkl')
+    return this._load_pickle('ordered_skus.pkl')
 
   def load_order_details(this):
     return this._load_pickle('order_details.pkl')
