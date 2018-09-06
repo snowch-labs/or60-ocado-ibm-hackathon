@@ -25,7 +25,7 @@ class DataLoader:
     return pickle.loads(body.read())
 
   def load_order_details_1000(this):
-    return _load_pickle('order_details_1000.pkl')
+    return this._load_pickle('order_details_1000.pkl')
 
   def load_ordered_skus(this):
-    return _load_pickle('ordered_skus.pkl')
+    return this._load_pickle('ordered_skus.pkl')
