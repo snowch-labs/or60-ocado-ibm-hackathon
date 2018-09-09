@@ -24,6 +24,15 @@ class DataLoader:
     if not hasattr(body, "__iter__"): body.__iter__ = types.MethodType( __iter__, body )
     return pickle.loads(body.read())
 
+  def load_twco_weather_data(this):
+    def __iter__(self): return 0
+    body = this.client.get_object(
+        Bucket=this.credentials['BUCKET'],
+        Key='twco_weather_data.csv'
+        )['Body']
+    if not hasattr(body, "__iter__"): body.__iter__ = types.MethodType( __iter__, body )
+    return pd.read_csv(body)
+
   def load_order_details_1000(this):
     return this._load_pickle('order_details_1000.pkl')
 
